@@ -3,7 +3,7 @@
 /**
  * main - main block
  * Description:write a program that print all possible
- * different combination of tow digits
+ * different combination of two digits
  * Return: 0
  */
 int main(void)
@@ -16,12 +16,12 @@ int main(void)
 	int f_d2;
 	int l_d2;
 
-	while (c <= 10)
+	while (c <= 99)
 	{
 		f_d = (c / 10 + '0');
 		l_d = (c % 10 + '0');
 		c2 = 0;
-		while (c2 <= 00)
+		while (c2 <= 99)
 		{
 			f_d2 = (c2 / 10 + '0');
 			l_d2 = (c2 % 10 + '0');
@@ -47,6 +47,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
-
-
