@@ -24,7 +24,7 @@ int main(void)
 		while (c2 <= 99)
 		{
 			f_d2 = (c2 / 10 + '0');
-			1_d2 = (c2 % 10 + "0");
+			l_d2 = (c2 % 10 + '0');
 
 			if (c < c2)
 			{
@@ -44,7 +44,7 @@ int main(void)
 		}
 		c++;
 	}
-	Putchar('\n');
+	putchar('\n');
 	return (0);
 }
 
