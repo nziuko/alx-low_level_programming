@@ -177,14 +177,14 @@ void print_osabi(unsigned char *e_ident)
 }
 
 
-void print_abi(unsigned char *e_ident);
+void print_abi(unsigned char *e_ident)
 {
 	printf(" ABI Version: %d\n",
 		e_ident[EI_ABIVERSION]);
 }
 
 
-void print_type(unsigned int e_type, unsigned char *e_ident);
+void print_type(unsigned int e_type, unsigned char *e_ident)
 {
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
@@ -214,7 +214,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident);
 }
 
 
-void print_entry(unsigned long int e_entry, unsigned char *e_ident);
+void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf(" Entry point address: ");
 
@@ -233,7 +233,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 }
 
 
-void close_elf(int elf);
+void close_elf(int elf)
 {
 	if (close(elf) == -1)
 	{
@@ -244,7 +244,7 @@ void close_elf(int elf);
 }
 
 
-int main(int __attribute__((__unused__)) argc, char *argv[]);
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
 	Elf64_Ehdr *header;
 	int o, r;
